@@ -45,7 +45,7 @@ conn.logger.warn('Connected Timeout')
 })
 conn.on("close", async() => {
 conn.logger.warn('Closed Connection')
-conn.autoReconnect = ReconnectMode.onConnectionLost
+await conn.connect();
 })
 console.log(stats)
 fs.writeFileSync('./session.json', JSON.stringify(authInfo, null, '\t'))
