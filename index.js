@@ -31,11 +31,10 @@ if (fs.existsSync('./session.json')) conn.loadAuthInfo('./session.json')
    conn.on('qr', qr => {
    console.log(`PLEASE SCAN QR`)
 })
+
 conn.on('connecting', () => {
    console.log(`Connecting...`)
- 
 })
-
 conn.on("open", () => {
 const authInfo = conn.base64EncodedAuthInfo()
 let stats = {
@@ -53,7 +52,6 @@ conn.autoReconnect = ReconnectMode.onConnectionLost
 console.log(stats)
 fs.writeFileSync('./session.json', JSON.stringify(authInfo, null, '\t'))
 })
-
 
  require('./src/loader')
  async function run() {// Function biar bisa run bot
