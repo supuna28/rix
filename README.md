@@ -28,6 +28,7 @@ Edit the required value in [`config.js`](https://github.com/Rizxyu/RIXLE-BOT/blo
 ```js
 userbot = {
  owner: [
+  "6281261324817",
   "62822980698995", 
   "436504463151666",
   "6282328303332",
@@ -41,7 +42,7 @@ userbot = {
    prefix: ["/"],
    gexp: 50,
    packname: 'RixleBot',
-   author: '@_RizkyAdiNur',
+   author: 'Arifi Razzaq',
     setting: {
     admin: "only admin",
     group: "only group",
@@ -84,10 +85,10 @@ userbot = {
 
 
 # 👥My Team [`Fear Team`](https://chat.whatsapp.com/HCF35wzLasQ2xdUff29oqt)
+* [`Arifi Razzaq (Dev)`](https://github.com/Arifirazzaq2001)
 * [`Fauzan (Dev)`](https://github.com/FzNMYBot)
 * [`Ivan (Dev)`](https://github.com/ivan-MLN)
 * [`Sanz (Dev)`](https://github.com/sanzgantengz)
 * [`Rizky (Dev)`](https://github.com/Rizxyu)
-* [`Arifi Razzaq`](https://github.com/Arifirazzaq2001)
 * [`Oreki (Kanjut)`](https://github.com/Oreki-san)
-* [`ＲｉｘｌｅＢoｔ (bot whatsapp)`](https://wa.me/62823283033323)
+* [`Ｒｉｘｌｅ  Ｂoｔ`](https://wa.me/687955238)
