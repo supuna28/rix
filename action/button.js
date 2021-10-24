@@ -41,12 +41,6 @@ switch (button.split(" ")[0].toLowerCase()) {
     const wasVote = absen.includes(m.sender)
     if (wasVote) return m.reply('*Kamu sudah absen!*')
     absen.push(m.sender)
-     let d = new Date
-     date = d.toLocaleDateString('id', {
-        day: 'numeric',
-        month: 'long',
-        year: 'numeric'
-    })
     list = absen.map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')
      caption = `
 Tanggal: ${date}
@@ -141,13 +135,13 @@ const name = conn.getName(m.sender)
 
 let d2 = new Date(new Date + 3600000)
     let locale = 'id'
-    // d2.getTimeZoneOffset()
+    // d.getTimeZoneOffset()
     // Offset -420 is 18.00
     // Offset    0 is  0.00
     // Offset  420 is  7.00
     let weton = ['Pahing', 'Pon', 'Wage', 'Kliwon', 'Legi'][Math.floor(d / 84600000) % 5]
-    let week = d2.toLocaleDateString(locale, { weekday: 'long' })
-    let date = d2.toLocaleDateString(locale, {
+    let week = d.toLocaleDateString(locale, { weekday: 'long' })
+    let date = d.toLocaleDateString(locale, {
       day: 'numeric',
       month: 'long',
       year: 'numeric'
@@ -157,7 +151,7 @@ let d2 = new Date(new Date + 3600000)
       month: 'long',
       year: 'numeric'
     }).format(d)
-    let time = d2.toLocaleTimeString(locale, {
+    let time = d.toLocaleTimeString(locale, {
       hour: 'numeric',
       minute: 'numeric',
       second: 'numeric'
