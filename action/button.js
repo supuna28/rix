@@ -139,15 +139,15 @@ uptime = process.uptime();
 timestamp = speed();
 const name = conn.getName(m.sender)
 
-let d = new Date(new Date + 3600000)
+let d2 = new Date(new Date + 3600000)
     let locale = 'id'
-    // d.getTimeZoneOffset()
+    // d2.getTimeZoneOffset()
     // Offset -420 is 18.00
     // Offset    0 is  0.00
     // Offset  420 is  7.00
     let weton = ['Pahing', 'Pon', 'Wage', 'Kliwon', 'Legi'][Math.floor(d / 84600000) % 5]
-    let week = d.toLocaleDateString(locale, { weekday: 'long' })
-    let date = d.toLocaleDateString(locale, {
+    let week = d2.toLocaleDateString(locale, { weekday: 'long' })
+    let date = d2.toLocaleDateString(locale, {
       day: 'numeric',
       month: 'long',
       year: 'numeric'
@@ -157,7 +157,7 @@ let d = new Date(new Date + 3600000)
       month: 'long',
       year: 'numeric'
     }).format(d)
-    let time = d.toLocaleTimeString(locale, {
+    let time = d2.toLocaleTimeString(locale, {
       hour: 'numeric',
       minute: 'numeric',
       second: 'numeric'
