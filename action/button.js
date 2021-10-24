@@ -41,6 +41,12 @@ switch (button.split(" ")[0].toLowerCase()) {
     const wasVote = absen.includes(m.sender)
     if (wasVote) return m.reply('*Kamu sudah absen!*')
     absen.push(m.sender)
+     let d = new Date
+     date = d.toLocaleDateString('id', {
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric'
+    })
     list = absen.map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')
      caption = `
 Tanggal: ${date}
@@ -91,7 +97,7 @@ ${conn.absen[id][2]}
 ${list}
 │ 
 └────`.trim()
-    await conn.send2Button(m.chat, caption, userbot.packname, 'Delete', 'absend', 'Absen', 'absen', { quoted: m, contextInfo: {"mentionedJid": conn.parseMention(caption)}} )
+    await conn.sendButton(m.chat, caption, userbot.packname, 'Delete', 'absend', 'Absen', 'absen', { quoted: m, contextInfo: {"mentionedJid": conn.parseMention(caption)}} )
    break;
 
    case "twm":
@@ -133,7 +139,7 @@ uptime = process.uptime();
 timestamp = speed();
 const name = conn.getName(m.sender)
 
-let d2 = new Date(new Date + 3600000)
+let d = new Date(new Date + 3600000)
     let locale = 'id'
     // d.getTimeZoneOffset()
     // Offset -420 is 18.00
@@ -205,7 +211,7 @@ return "*°* " + userbot.prefix + menu.help
 after
 ].join("\n\n")
 
-conn.send2ButtonLoc(m.chat, await (await fetch('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrF6fyFoGCHmsmOXWjFxIXh-467D1nRhA4mQ&usqp=CAU')).buffer(), text, userbot.packname, `Creator`, `creator`, `Rules`, `rules`, m)
+conn.sendButtonLoc(m.chat, await (await fetch('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrF6fyFoGCHmsmOXWjFxIXh-467D1nRhA4mQ&usqp=CAU')).buffer(), text, userbot.packname, `Creator`, `creator`, `Rules`, `rules`, m)
 break;
 
    case "rules":
