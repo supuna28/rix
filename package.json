@@ -1,7 +1,7 @@
 {
-  "name": "Rixle Bot",
+  "name": "RIXLE-BOT",
   "version": "1.1.2",
-  "description": "WhatsApp Bot Ringan",
+  "description": "Don't Forget To Subscribe My Channel Youtube : Arifi Razzaq OFFICIAL",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -9,14 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Rizxyu/RIXLE-BOT.git"
+    "url": "git+https://github.com/Arifirazzaq2001/RIXLE-BOT.git"
   },
   "keywords": [
     "whatsapp-bot"
   ],
-  "author": "rizky",
+  "founder": "Rizky",
+  "author": "Arifi",
   "bugs": {
-    "url": "https://github.com/Rizxyu/RIXLE-BOT/issues"
+    "url": "https://github.com/Arifirazzaq2001/RIXLE-BOT/issues"
   },
   "dependencies": {
     "@adiwajshing/baileys": "^3.5.2",
