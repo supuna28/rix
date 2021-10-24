@@ -19,13 +19,11 @@ global.antidelete = false
              global.baileys = Baileys //Hehe
                global.db = new JsonDB(new Config("database", true, false, '/'));
                  global.Public = false
-                   global.scrap = require("./Lib/scrape")
-                     global.namo = 'Arifi Razzaq'
-                       global.logo = 'EDGE'
+                   global.scrap = require("./Lib/scrape");
 
 conn.version = [2, 2119, 6]
 conn.logger.level = "warn"
-conn.browserDescription = [namo, logo, 94.0.992.50]
+conn.browserDescription = ['R I X L E', 'EDGE', '94.0.992.50']
 
 if (fs.existsSync('./session.json')) conn.loadAuthInfo('./session.json')
    conn.on('qr', qr => {
